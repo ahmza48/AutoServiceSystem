@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Documents</title>
+     <meta charset="UTF-8">
+    <title>Document</title>
+<meta charset="UTF-8">
+     <meta charset="UTF-8">
+    <title>ShowContacts</title>
+
+    <!-- Latest compiled and minified CSS -->
+
+      <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+  	<script
+  src="http://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+	<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+    <link rel="stylesheet" href="/static/styles/aboutus.css">
+
+</head>
+<body onload="loadData()">
+<div class="header-container">
+        <div class="logo">
+            <a style="text-decoration: none" href="/adminpanel"><h1>Admin Panel</h1></a>
+        </div>
+
+        <div class="navbar">
+            <nav class="navbar-container">
+                <ul id="navbar-links" class="sf-menu">
+
+                    <li id="service-id">
+                        <a href="/employees">Employees</a>
+                    </li>
+
+                    <li
+                        id="aboutus-id"
+                    >
+                        <a href="/services">Services</a>
+
+                    </li>
+                    <li
+                        id="our-team-id"
+                    >
+                        <a href="/viewfeedback">View Feedbacks</a>
+                    </li>
+
+                    <li
+                        id="menu-item-989"
+                    >
+                        <a href="/viewappointments">Appointment</a>
+                    </li>
+
+                    <li
+                        id="contact-id"
+                    >
+                        <a href="/adminlogout">Logout</a>
+
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+    </div>
+
+{#<div class="container">#}
+{#<div class="table-responsive">#}
+{#<table class="table table-bordered">#}
+{#<thead class="table-light">#}
+{#<tr>#}
+{#<th>Emp ID</th>#}
+{#<th>FirstName</th>#}
+{#<th>LastName</th>#}
+{#<th>Specification</th>#}
+{#<th>Delete</th>#}
+{#</tr>#}
+{#</thead>#}
+{#<tbody>#}
+{#{% for emp in employees %}#}
+{#    <tr>#}
+{#        <td>{{ emp[0] }}</td>#}
+{#        <td>{{ emp[1] }}</td>#}
+{#        <td>{{ emp[2] }}</td>#}
+{#        <td>{{ emp[3] }}</td>#}
+{#        <td><button type="button" class="btn btn-light" ><a style="text-decoration: none" href="/delete/{{ emp[0] }}">Delete</a></button></td>#}
+{#    </tr>#}
+{#{% endfor %}#}
+{#</tbody>#}
+{#</table>#}
+{#</div>#}
+{#</div>#}
+<div class="container">
+<table id="show" border="2">
+    <thead>
+            <tr>
+                <th>Id</th>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Service Group</th>
+                <th>Specification</th>
+                <th>Phone Number</th>
+                <th>Delete</th>
+            </tr>
+    </thead>
+</table>
+</div>
+<script>
+        function loadData() {
+            console.log("hello")
+                 $.ajax({
+                     type:"GET",
+                     url:"/api/employees",
+                     success: function(result){
+                         var mydata = JSON.parse(result)
+                         if(mydata !=null || mydata !=""){
+                             table = $('#show').DataTable( {
+                                 data: mydata ,
+                                 destroy: true,
+                                 columns: [
+                                     { data : 'id'},
+                                     { data: 'firstname' },
+                                     { data: 'lastname' },
+                                     { data: 'servicegroup'},
+                                     { data: 'specification' },
+                                     { data: 'phn'},
+                                     {
+                                         data: null,
+                                         render: function(data){
+                                             console.log(data);
+                                             {#const html = "<a class='' href='"+data.id+"' id='row-"+data.id+"'>Delete</a>"#}
+                                             const html2 = "<a class='' href='/delete/employee/" +data.id+ "'>Delete</a>"
+                                             return html2;
+                                         },
+                                     }
+                                ]
+                            } );
+                         }
+                        }
+                  });
+        };
+
+    </script>
+    <h4 style="display: flex; color: red;justify-content: center">{{ msg }}</h4>
+</body>
+</html>

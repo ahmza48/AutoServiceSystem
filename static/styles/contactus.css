@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.header-container {
+  min-height: 16vh;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+}
+
+.logo {
+  margin-top: 2rem;
+  margin-right: 4rem;
+  color: rgb(1, 71, 201);
+  font-size: larger;
+}
+
+.navbar {
+  margin-top: 2rem;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 3rem;
+}
+
+.navbar nav ul {
+  display: flex;
+  justify-content: space-between;
+  /* margin-left: 20px; */
+  /* padding-right: 20px; */
+  align-items: center;
+  list-style: none;
+}
+
+.navbar nav ul li {
+  padding-top: 1rem;
+  font-size: large;
+  padding-right: 2rem;
+  list-style-type: none;
+}
+
+.navbar nav ul li a {
+  text-decoration: none;
+  color: grey;
+  font-size: medium;
+  /* font-weight: 580; */
+  position: relative;
+  font-size: large;
+}
+
+.navbar nav ul li a:hover {
+  cursor: pointer;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: rgb(1, 71, 201);
+}
+
+.navbar nav ul li a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: rgb(1, 71, 201);
+  left: 0;
+  bottom: -4px;
+  position: absolute;
+  transition: 0.5s ease;
+}
+
+.navbar ul li a:hover::after {
+  width: 100%;
+}
+
+.section1 {
+  min-height: 15vh;
+  display: flex;
+  justify-content: space-between;
+  background: rgb(231, 235, 238);
+}
+.section1-title {
+  margin-top: 2.5rem;
+  margin-bottom: 2rem;
+  margin-left: 3rem;
+  font-size: larger;
+  font-weight: 450;
+}
+
+.section1-info {
+  margin-top: 2.5rem;
+  margin-bottom: 2rem;
+  margin-right: 3rem;
+  font-size: small;
+}
+.section1-info p {
+  color: rgba(0, 0, 0, 0.5);
+}
+.section1-info a {
+  text-decoration: none;
+  color: rgb(1, 71, 201);
+}
+
+.map-section{
+    width: 100%;
+    min-height: 90vh;
+}
+.map-section iframe{
+    width: 100%;
+    height: 80vh;
+}

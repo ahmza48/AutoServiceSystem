@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/styles/aboutus.css">
+
+    <style>
+        #customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 2px solid;
+  padding: 8px;
+}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+}
+
+    </style>
+</head>
+
+<body>
+
+<div class="header-container">
+        <div class="logo">
+            <a style="text-decoration: none" href="/adminpanel"><h1>Admin Panel</h1></a>
+        </div>
+
+        <div class="navbar">
+            <nav class="navbar-container">
+                <ul id="navbar-links" class="sf-menu">
+
+                    <li id="service-id">
+                        <a href="/employees">Employees</a>
+                    </li>
+
+                    <li
+                        id="aboutus-id"
+                    >
+                        <a href="/services">Services</a>
+
+                    </li>
+                    <li
+                        id="our-team-id"
+                    >
+                        <a href="/viewfeedback">View Feedbacks</a>
+                    </li>
+
+                    <li
+                        id="menu-item-989"
+                    >
+                        <a href="/viewappointments">Appointment</a>
+                    </li>
+
+                    <li
+                        id="contact-id"
+                    >
+                        <a href="/adminlogout">Logout</a>
+
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+    </div>
+
+
+
+<table id="customers">
+<thead>
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Email</th>
+<th>Subject</th>
+<th>Message</th>
+</tr>
+</thead>
+<tbody>
+{% for emp in feedback %}
+    <tr>
+        <td>{{ emp[0] }}</td>
+        <td>{{ emp[1] }}</td>
+        <td>{{ emp[2] }}</td>
+        <td>{{ emp[3] }}</td>
+        <td>{{ emp[4] }}</td>
+    </tr>
+{% endfor %}
+</tbody>
+</table>
+</body>
+</html>

@@ -1,0 +1,5 @@
+SECRET_KEY = 'newkey'
+HOST = 'localhost'
+USER = 'root'
+PASSWORD = '1513118majeed'
+DB = 'carservice'

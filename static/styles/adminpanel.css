@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+
+  .header-container {
+    min-height: 16vh;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .logo {
+    margin-top: 2rem;
+    margin-right: 4rem;
+    color: rgb(1, 71, 201);
+    font-size: larger;
+  }
+
+  .navbar {
+    margin-top: 2rem;
+  }
+
+  .navbar ul {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 3rem;
+  }
+
+  .navbar nav ul {
+    display: flex;
+    justify-content: space-between;
+    /* margin-left: 20px; */
+    /* padding-right: 20px; */
+    align-items: center;
+    list-style: none;
+  }
+
+  .navbar nav ul li {
+    padding-top: 1rem;
+    font-size: large;
+    padding-right: 2rem;
+    list-style-type: none;
+  }
+
+  .navbar nav ul li a {
+    text-decoration: none;
+    color: grey;
+    font-size: medium;
+    /* font-weight: 580; */
+    position: relative;
+    font-size: large;
+  }
+
+  .navbar nav ul li a:hover {
+    cursor: pointer;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    color: rgb(1, 71, 201);
+  }
+
+  .navbar nav ul li a::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    background: rgb(1, 71, 201);
+    left: 0;
+    bottom: -4px;
+    position: absolute;
+    transition: 0.5s ease;
+  }
+
+  .navbar ul li a:hover::after {
+    width: 100%;
+  }
+
+  .img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+      width: 100%;
+      height: 450px;
+      background-image: url(/static/images/HomeImage-1.jpg);
+  }
+  .img-container .heading{
+    font-size: x-large;
+    letter-spacing: 0.15em;
+    border: 1px solid #fff;
+    padding: 10px;
+    transition: 0.5s ease;
+    transform: translateY(5px);
+  }
+  .img-container .heading:hover{
+    transform: translateY(0px);
+    cursor: pointer;
+  }
+
+  .img-container h1{
+    color: white;
+  }
+
+  .button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: white;
+  color: black;
+  border: 2px solid rgb(1, 71, 201);
+}
+
+.button1:hover {
+  background-color: rgb(1, 71, 201);
+  color: white;
+}
+
+.btns{
+  display: flex;
+  justify-content: center;
+}

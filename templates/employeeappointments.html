@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Title</title>
+    <style>
+        #customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 2px solid;
+  padding: 8px;
+}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+}
+
+    </style>
+</head>
+<body>
+    <table id="customers">
+        <tr>
+            <th>Customer Name</th>
+            <th>Email</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+            <th>Phone Number</th>
+            <th>Service</th>
+            <th>Mark as Done</th>
+        </tr>
+        {% for appointment in apt %}
+        <tr>
+            <td>{{ appointment[1] }}</td>
+            <td>{{ appointment[2] }}</td>
+            <td>{{ appointment[3] }}</td>
+            <td>{{ appointment[4] }}</td>
+            <td>{{ appointment[5] }}</td>
+            <td>{{ appointment[7] }}</td>
+            <td><button id="{{ appointment[0] }}" value="{{ appointment[0] }}" onclick="delAppointment(this)">Done</button></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+<script>
+    function delAppointment(btn)
+    {
+        var appointmentId = btn.value;
+        $.ajax({
+            type : "DELETE",
+            url : "/api/appointments/delete/"+appointmentId,
+            success: function(res)
+            {
+                console.log(res)
+                if(res==true)
+                {
+                    location.reload()
+                }
+            }
+        })
+        console.log(appointmentId);
+    }
+
+</script>
+
+
+</html>

@@ -1,0 +1,735 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.header-container {
+  min-height: 16vh;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+}
+
+.logo {
+  margin-top: 2rem;
+  margin-right: 4rem;
+  color: rgb(1, 71, 201);
+  font-size: larger;
+}
+
+.navbar {
+  margin-top: 2rem;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 3rem;
+}
+
+.navbar nav ul {
+  display: flex;
+  justify-content: space-between;
+  /* margin-left: 20px; */
+  /* padding-right: 20px; */
+  align-items: center;
+  list-style: none;
+}
+
+.navbar nav ul li {
+  padding-top: 1rem;
+  font-size: large;
+  padding-right: 2rem;
+  list-style-type: none;
+}
+
+.navbar nav ul li a {
+  text-decoration: none;
+  color: grey;
+  font-size: medium;
+  /* font-weight: 580; */
+  position: relative;
+  font-size: large;
+}
+
+.navbar nav ul li a:hover {
+  cursor: pointer;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: rgb(1, 71, 201);
+}
+
+.navbar nav ul li a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: rgb(1, 71, 201);
+  left: 0;
+  bottom: -4px;
+  position: absolute;
+  transition: 0.5s ease;
+}
+
+.navbar ul li a:hover::after {
+  width: 100%;
+}
+
+.section1 {
+  min-height: 15vh;
+  display: flex;
+  justify-content: space-between;
+  background: rgb(231, 235, 238);
+
+}
+.section1-title {
+  margin-top: 2.5rem;
+  margin-bottom: 2rem;
+  margin-left: 3rem;
+  font-size: larger;
+  font-weight: 450;
+}
+
+.section1-info {
+  margin-top: 2.5rem;
+  margin-bottom: 2rem;
+  margin-right: 3rem;
+  font-size: small;
+}
+.section1-info p {
+  color: rgba(0, 0, 0, 0.5);
+}
+.section1-info a {
+  text-decoration: none;
+  color: rgb(1, 71, 201);
+}
+
+.section2 {
+  min-height: 90vh;
+  padding: 3rem;
+  padding-left: 3.5rem;
+}
+.co-founders-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.co-founder {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.co-founder .name {
+  margin-top: 1rem;
+  font-size: large;
+}
+.co-founder .title {
+  margin-top: 1rem;
+  font-size: small;
+  color: gray;
+}
+.vertical-bar {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-right: 50%;
+  margin-left: 50%;
+  height: 0.4vh;
+  width: 3vw;
+  background-color: rgb(1, 71, 201);
+}
+.cofounder-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem;
+  font-size: small;
+  color: grey;
+  max-width: 23rem;
+}
+
+.co-founder .img {
+  transition: transform 0.5s;
+  position: relative;
+  overflow: hidden;
+}
+
+.layer {
+  width: 100%;
+  height: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), #a1e2ee);
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* flex-direction: column; */
+  transition: 0.5s;
+}
+
+.layer a {
+  border-radius: 0.4rem solid #fff;
+  background: #fff;
+  padding: 1rem;
+  margin-bottom: -10rem;
+  color: grey;
+  margin-left: 0.3rem;
+  font-weight: 300;
+  text-decoration: none;
+}
+.layer a:hover {
+  background-color: rgb(12, 85, 221);
+  color: #fff;
+}
+
+.img:hover .img {
+  cursor: pointer;
+}
+.img:hover .layer {
+  height: 100%;
+}
+
+.section3 {
+  min-height: 70vh;
+  width: 100%;
+  background-color: rgb(231, 235, 238);
+  display: flex;
+  flex-direction: column;
+}
+
+.section3-heading {
+  margin-top: 5rem;
+  margin-left: 5rem;
+  font-size: x-large;
+}
+
+.skill-section-vertical-bar {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 5rem;
+  height: 0.4vh;
+  width: 5vw;
+  background-color: rgb(1, 71, 201);
+}
+
+.skills {
+  margin: 0rem 3rem 3rem 3rem;
+  display: flex;
+}
+
+.skillset {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.bar {
+  margin-top: 2rem;
+}
+
+.bar-info {
+  margin-top: 0.5rem;
+  color: grey;
+  font-size: medium;
+  font-weight: 100;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bar .progress-line {
+  position: relative;
+  height: 1.5vh;
+  width: 100%;
+  background-color: #dfd9d9;
+}
+
+.bar .progress-line span {
+  height: 100%;
+  width: 0%;
+  background-color: rgb(22, 92, 223);
+  position: absolute;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+/* .progress-line.air-conditioning span {
+    width: 95%;
+} */
+
+.progress-line.air-conditioning span {
+  width: 95% !important;
+}
+
+.progress-line.lube-oil span {
+  width: 72% !important;
+}
+
+.progress-line.car-wash span {
+  width: 90% !important;
+}
+
+.progress-line.engine span {
+  width: 92% !important;
+}
+
+.progress-line.brake span {
+  width: 84% !important;
+}
+
+.progress-line.suspension span {
+  width: 89% !important;
+}
+
+.bar .progress-line span::before {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: -0.6rem;
+  height: 0;
+  width: 0;
+  border: 0.5rem solid transparent;
+  border-bottom-width: 0px;
+  border-top-color: rgb(22, 92, 223);
+  opacity: 0;
+}
+
+.bar .progress-line span::after {
+  position: absolute;
+  right: 0;
+  top: -1.85rem;
+  color: rgb(231, 235, 238);
+  font-size: medium;
+  font-weight: 500;
+  background: rgb(22, 92, 223);
+  padding: 0.05rem 0.8rem;
+  border-radius: 0.2rem;
+  opacity: 0;
+}
+
+.bar .progress-line.active span {
+  width: 80%;
+  animation: animate 1.3s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+.bar .progress-line span.active::before {
+  animation: showText2 0.7s 1.5s linear forwards;
+}
+
+
+
+/* 
+.progress-line.lube-oil.active span::after {
+  content: "60%";
+}
+
+.progress-line.car-wash.active span::after {
+  content: "80%";
+}
+
+.progress-line.engine.active span::after {
+  content: "89%";
+}
+
+.progress-line.brake.active span::after {
+  content: "84%";
+}
+
+.progress-line.suspension.active span::after {
+  content: "89%";
+} */
+
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes showText2 {
+  100% {
+    opacity: 1;
+  }
+}
+
+/* .section3 {
+  min-height: 70vh;
+  width: 100%;
+  background-color: rgb(231, 235, 238);
+  display: flex;
+  flex-direction: column;
+}
+.section3-heading {
+  margin-top: 5rem;
+  margin-left: 5rem;
+  font-size: x-large;
+}
+
+.skill-section-vertical-bar {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 5rem;
+  height: 0.4vh;
+  width: 5vw;
+  background-color: rgb(1, 71, 201);
+}
+
+.skills {
+  margin: 3rem;
+  display: flex;
+}
+
+.skillset {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.bar {
+  margin-top: 2rem;
+}
+
+.bar-info {
+  margin-top: 0.5rem;
+  color: grey;
+  font-size: medium;
+  font-weight: 100;
+}
+
+.bar .bar-info span {
+  font-weight: 200;
+  opacity: 0;
+  animation: showText 0.8s 1.2s linear forwards;
+}
+@keyframes showText {
+  100% {
+    opacity: 1;
+  }
+}
+.bar .progress-line {
+  position: relative;
+  height: 1.5vh;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+  background-color: #dfd9d9;
+}
+.bar .progress-line span {
+  height: 100%;
+  width: 80%;
+  background-color: rgb(22, 92, 223);
+  position: absolute;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: animate 1.2s 1.2s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.progress-line.air-conditioning span {
+  width: 95%;
+}
+
+.progress-line.lube-oil span {
+  width: 72%;
+}
+
+.progress-line.car-wash span {
+  width: 90%;
+}
+
+.progress-line.engine span {
+  width: 92%;
+}
+
+.progress-line.brake span {
+  width: 84%;
+}
+
+.progress-line.suspension span {
+  width: 89%;
+}
+
+.bar .progress-line span::before {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: -0.6rem;
+  height: 0;
+  width: 0;
+  border: 0.5rem solid transparent;
+  border-bottom-width: 0px;
+  border-top-color: rgb(22, 92, 223);
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+
+.bar .progress-line span::after {
+  position: absolute;
+  right: 0;
+  top: -1.85rem;
+  color: rgb(231, 235, 238);
+  font-size: medium;
+  font-weight: 500;
+  background: rgb(22, 92, 223);
+  padding: 0.05rem 0.8rem;
+  border-radius: 0.2rem;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+@keyframes showText2 {
+  100% {
+    opacity: 1;
+  }
+}
+
+.progress-line.air-conditioning span::after {
+  content: "90%";
+}
+
+.progress-line.lube-oil span::after {
+  content: "60%";
+}
+
+.progress-line.car-wash span::after {
+  content: "80%";
+}
+
+.progress-line.engine span::after {
+  content: "89%";
+}
+
+.progress-line.brake span::after {
+  content: "84%";
+}
+
+.progress-line.suspension span::after {
+  content: "89%";
+} */
+
+.footer {
+  min-height: 90vh;
+  width: 100%;
+  background-color: rgb(117, 117, 117);
+}
+.footer-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* margin-top: 1rem; */
+  background-color: rgb(117, 117, 117);
+  /* color: rgb(240, 240, 240); */
+  color: #fff;
+}
+
+.footer-header-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  /* color: rgb(219, 219, 219); */
+  font-size: medium;
+}
+
+.footer-header-detail {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* color: rgb(219, 219, 219); */
+  font-size: medium;
+}
+
+.footer-header-detail {
+  font-size: larger;
+}
+
+#service-img {
+  padding-bottom: 2rem;
+}
+
+#service-detail {
+  margin-bottom: 2rem;
+}
+
+.footer-vertical-line {
+  margin-top: 1rem;
+  margin-left: 6rem;
+  margin-right: 6rem;
+  height: 0.15vh;
+  width: 84%;
+  background-color: rgb(209, 209, 209);
+}
+
+.footer-end {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-end-portion1 {
+  margin-top: 4rem;
+  /* margin-left: 3rem; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: #fff;
+}
+
+.portion1-title p {
+  font-size: larger;
+}
+
+.portion1-details-points {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.portion1-details-points .point {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  font-size: 0.9em;
+}
+.portion1-details-points .point .point-info {
+  padding-left: 1rem;
+}
+.portion1-details p {
+  padding-bottom: 0.75rem;
+}
+.footer-portion-vertical-line {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  margin-right: 6rem;
+  height: 0.25vh;
+  width: 4vw;
+  background-color: rgb(172, 170, 170);
+}
+
+.portion3-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-end-portion2 {
+  margin-top: 4rem;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+.portion2-points {
+  display: flex;
+  /* align-items: center; */
+  flex-direction: column;
+}
+/* .portion2-title p{
+    font-size: larger;
+  }
+  .portion2-points p{
+    font-size: large;
+  } */
+
+.portion2-points ul li {
+  list-style-type: none;
+  margin-top: 0.5rem;
+  transition: 0.3s ease-in-out;
+  transform: translateY(1px);
+}
+.portion2-points ul li:hover {
+  transform: translateY(0);
+  transform: scale(1.05);
+}
+.portion2-points ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s ease-in-out;
+}
+.portion2-points ul li a:hover {
+  color: rgb(1, 71, 201);
+}
+.footer-end-portion3 {
+  margin-top: 4rem;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  font-size: small;
+}
+.portion3-title p{
+    font-size: larger;
+}
+.tag-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.tag-row a {
+  margin: 0.25rem;
+  text-decoration: none;
+  color: #fff;
+  border: 0.5px solid grey;
+  padding: 0.5rem;
+}
+.tag-row a:hover {
+  border: 0.5px solid #fff;
+}
+.footer-end-portion4 {
+  margin-top: 4rem;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+.portion4-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.portion4-details .days {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: small;
+}
+.portion4-details .timings {
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: small;
+}
+
+.days p {
+  padding-top: 0.5rem;
+}
+
+.timings p {
+  padding-top: 0.5rem;
+}
+/* @media screen and (max-width: 768px) {
+  
+} */
+
+@media (max-width: 768px) {
+  .header-container {
+      flex-wrap: wrap;
+  }
+  .logo {
+      width: 100%;
+      text-align: center;
+  }
+  .navbar {
+      width: 100%;
+      justify-content: center;
+  }
+}
+
+

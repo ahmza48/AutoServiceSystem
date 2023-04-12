@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script> -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+      integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/static/styles/appointment.css" />
+    <!-- <link rel="stylesheet" href="/static/styles/ourteam.css" /> -->
+    <script
+      src="https://kit.fontawesome.com/292d9dbc3b.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Appointment</title>
+  </head>
+
+  <body>
+    <div class="header-container">
+      <div class="header-container">
+        <div class="logo">
+        <h1>
+
+            AUTOSERVICE
+
+        </h1>
+        </div>
+
+        <div class="navbar">
+            <nav class="navbar-container">
+                <ul id="navbar-links" class="sf-menu">
+                    <li id="home-id">
+                        <a href="/" aria-current="page">Home</a>
+                    </li>
+
+                    <li id="service-id">
+                        <a href="/ourservices">Services</a>
+                    </li>
+
+                    <!-- <li
+                        id="services-id">
+                        <a href="/services">Services</a>
+                        <ul class="dropdown">
+                        <li
+                            id="service1"
+                            class="menu-item menu-item-type-post_type menu-item-object-ql_services menu-item-1001"
+                        >
+                            <a href="/engine-diagnostics"
+                            >Engine Diagnostics</a
+                            >
+                        </li>
+                        <li
+                            id="service2"
+                            class="menu-item menu-item-type-post_type menu-item-object-ql_services menu-item-1000"
+                        >
+                            <a href="/lube-oil-and-filters"
+                            >Lube Oil and Filters</a
+                            >
+                        </li>
+                        <li
+                            id="service3"
+                            class="menu-item menu-item-type-post_type menu-item-object-ql_services menu-item-999"
+                        >
+                            <a href="/belts-and-hoses"
+                            >Belts and Hoses</a
+                            >
+                        </li>
+                        <li
+                            id="service4"
+                            class="menu-item menu-item-type-post_type menu-item-object-ql_services menu-item-998"
+                        >
+                            <a href="/air-conditioning"
+                            >Air Conditioning</a
+                            >
+                        </li>
+                        <li
+                            id="service5"
+                            class="menu-item menu-item-type-post_type menu-item-object-ql_services menu-item-997"
+                        >
+                            <a href="/brake-repair"
+                            >Brake Repair</a
+                            >
+                        </li>
+                        <li
+                            id="service6"
+                            class="menu-item menu-item-type-post_type menu-item-object-ql_services menu-item-996"
+                        >
+                            <a href="/tire-and-wheel-services"
+                            >Tire and Wheel Services</a
+                            >
+                        </li>
+                        </ul>
+                    </li> -->
+                    <li
+                        id="gallery-id"
+                    >
+                        <a href="/aboutus">About Us</a>
+
+                    </li>
+                    <li
+                        id="our-team-id"
+                    >
+                        <a href="/ourteam">Our Team</a>
+                    </li>
+
+                    <li
+                        id="menu-item-989"
+                    >
+                        <a href="/appointment">Appointment</a>
+                    </li>
+
+                    <li
+                        id="contact-id"
+                    >
+                        <a href="/contactus">Contact Us</a>
+
+                    </li>
+
+                    <li
+                        id="contact-id"
+                    >
+                        <a href="/login">Login</a>
+
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+    </div>
+    </div>
+
+    <div class="section1">
+      <div class="section1-title">
+        <p>APPOINTMENT</p>
+      </div>
+      <div class="section1-info">
+        <p>YOU ARE HERE: <a href="/">Home</a> / Make Appointment</p>
+      </div>
+    </div>
+
+    <div class="map-section">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1457.027158290183!2d74.30893701418401!3d31.57002600335576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39191ca7d960f837%3A0xc0bb6ddf0568a651!2sPunjab%20University%20College%20of%20Information%20Technology%20Old%20Campus!5e0!3m2!1sen!2s!4v1675014352896!5m2!1sen!2s"
+        width="600"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+
+    <div class="section2">
+      <div class="section2-heading">
+        <p>BOOK AN APPOINTMENT</p>
+      </div>
+
+      <div class="bar"></div>
+
+      <div class="section2-details">
+        <div class="detail-1">
+          <p>
+            We are one of the leading auto repair shops serving customers in
+            Lahore.
+          </p>
+        </div>
+        <div class="detail-2">
+          <p>
+            All mechanic services are performed by highly qualified mechanics.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="section3">
+      <select id="service-selector">
+        <option value="">Select a service</option>
+        <option value="car">Car Services</option>
+        <option value="bike">Bike Services</option>
+      </select>
+
+      <div id="service-display"></div>
+    </div> -->
+
+    <div class="appointment-info">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="well-block">
+              <div class="well-title">
+                <h2 style="color: rgb(54, 92, 173)">
+                  Need Assisstance? Book an Appointment
+                </h2>
+              </div>
+              <form action="/appointmentsubmission" method="post">
+                <!-- Form start -->
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group my-3">
+                      <label
+                        class="control-label"
+                        for="name"
+                        style="color: rgb(54, 92, 173)"
+                        ><strong>Name</strong></label
+                      >
+                      <input
+                        id="name"
+                        name="name"
+                        type="text"
+                        placeholder="Your Name"
+                        class="form-control input-md"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <!-- Text input-->
+                  <div class="col-md-6 my-3">
+                    <div class="form-group">
+                      <label
+                        class="control-label"
+                        for="email"
+                        style="color: rgb(54, 92, 173)"
+                        ><strong>Email</strong></label
+                      >
+                      <input
+                        id="email"
+                        name="email"
+                        type="text"
+                        placeholder="Your E-Mail"
+                        class="form-control input-md"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <!-- Select Basic -->
+                  <div class="col-md-6 my-2">
+                    <div class="form-group">
+                      <label
+                        class="control-label"
+                        for="time"
+                        style="color: rgb(54, 92, 173)"
+                        ><strong>Preferred Time</strong></label
+                      >
+                        <select id="time-picker"
+                        name="time"
+                        class="form-control"
+                        required>
+                        </select>
+                          <script>
+                             var select = document.getElementById("time-picker");
+var currentTime = new Date();
+
+for (var i = 0; i<24; i++) {
+  var option = document.createElement("option");
+  var time = new Date(currentTime.getTime() + (i * 60 * 60 * 1000));
+  option.text = time.toLocaleTimeString('en-US', {hour: 'numeric', hour12: true});
+  var breakTime = option.text;
+  var time2 = new Date(currentTime.getTime() + ((i+1) * 60 * 60 * 1000));
+  option.text = option.text + "-" + time2.toLocaleTimeString('en-US', {hour: 'numeric', hour12: true});
+  option.value = option.text;
+  if(breakTime === "11 PM")
+  {
+      break;
+  }
+  console.log(option.text)
+  select.add(option);
+}
+                          </script>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 my-2">
+                    <div class="form-group">
+                      <label
+                        class="control-label"
+                        for="phoneNumber"
+                        style="color: rgb(54, 92, 173)"
+                        ><strong>Phone Number</strong></label
+                      >
+                      <input
+                        id="phoneNumber"
+                        name="phoneNumber"
+                        type="text"
+                        placeholder="0320-1234567"
+                        class="form-control input-md"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                    <div class="col-md-12 my-2">
+                    <div class="form-group">
+                      <label
+                        class="control-label"
+                        for="address"
+                        style="color: rgb(54, 92, 173)"
+                        ><strong>Enter your Address</strong></label
+                      >
+                      <input
+                        id="address"
+                        name="address"
+                        type="text"
+                        placeholder="Your Address"
+                        class="form-control input-md"
+                        required
+                      />
+                    </div>
+                  </div>
+
+
+
+
+                  <div class="col-md-6 my-2">
+                    <div class="form-group">
+                      <label
+                        class="control-label"
+                        for="serviceCategory"
+                        style="color: rgb(54, 92, 173)"
+                        ><strong>Select Service for</strong></label
+                      >
+                      <select
+                        id="service-selector"
+                        name="serviceCategory"
+                        class="form-control"
+                        onchange="loadDifferentServices()"
+                        required
+                      >
+                      <option value="select">Select a service</option>
+                      <option value="car">Car Services</option>
+                      <option value="bike">Bike Services</option>
+                      </select>
+                    <div id="service-display"></div>
+                    </div>
+                </div>
+
+
+                    <div class="col-md-6 my-2">
+                    <div class="form-group">
+                      <label
+                        class="control-label"
+                        for="service"
+                        style="color: rgb(54, 92, 173)"
+                        ><strong>Services</strong></label
+                      >
+                        <select id="services" name="service" class="form-control">
+                        </select>
+                        <script>
+                            function loadDifferentServices()
+                            {
+                                console.log("hello");
+                                var selected =  document.getElementById("service-selector").value;
+                                console.log(selected)
+                                if(selected === "select")
+                                {
+                                    $("#services option").each(function() {
+                                        $(this).remove();
+                                    });
+                                    console.log("in return condition");
+                                    return;
+                                }
+                                $.ajax({
+                                    type:'GET',
+                                    url : '/api/services/'+selected,
+                                    success : function(result)
+                                    {
+                                        console.log(result);
+                                        console.log(result.length);
+                                        $("#services option").each(function() {
+                                        $(this).remove();
+                                        });
+                                        for(let i=0;i<result.length;i++)
+                                        {
+                                            $('#services').append("<option>"+result[i]+"</option>")
+                                        }
+                                    }
+                                })
+                            }
+                        </script>
+
+                    </div>
+                  </div>
+
+
+
+                  <div class="col-md-12 my-2">
+                      <div class="form-group">
+                          <button type="submit" id="singlebutton" name="singlebutton" class="btn btn-primary" >Make An Appointment</button>
+                      </div>
+                  </div>
+
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="well-block">
+              <div class="well-title">
+                <h2  style="color: rgb(54, 92, 173)">Why Appointment with Us</h2>
+              </div>
+              <div class="feature-block">
+                <div class="feature feature-blurb-text">
+                  <h4 class="feature-title"  style="color: rgb(54, 92, 173)">24/7 Hours Available</h4>
+                  <div class="feature-content">
+                    <p style="color: rgb(168, 168, 168);">
+                      Scheduling an appointment with our auto service system ensures convenient and efficient repair and maintenance for your vehicle. Our knowledgeable and skilled technicians use the latest tools and technology to provide top-quality services at affordable prices.
+                    </p>
+                  </div>
+                </div>
+                <div class="feature feature-blurb-text">
+                  <h4 class="feature-title" style="color: rgb(54, 92, 173)">Experienced Staff Available</h4>
+                  <div class="feature-content">
+                    <p style="color: rgb(168, 168, 168);">
+                      Experienced auto service technicians are essential for providing high-quality and reliable car repairs and maintenance. They use their technical knowledge, skills, and years of experience to diagnose, repair and maintain cars efficiently, ensuring customer satisfaction and safe driving.
+                    </p>
+                  </div>
+                </div>
+                <div class="feature feature-blurb-text">
+                  <h4 class="feature-title"  style="color: rgb(54, 92, 173)">Low Price & Fees</h4>
+                  <div class="feature-content">
+                    <p style="color: rgb(168, 168, 168);">
+                     Auto service system with low prices and fees, providing affordable yet high-quality maintenance and repair services for your vehicle. Save money and ensure your car's longevity with our budget-friendly options.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+        {% if msg %}
+            <h1 id="">{{ msg }}</h1>
+        {% endif %}
+
+
+
+    </div>
+    <div
+      class="modal fade"
+      id="staticBackdrop"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1
+              class="modal-title fs-5"
+              id="staticBackdropLabel"
+              style="color: rgb(32, 110, 212)"
+            >
+              Confirmation Message
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div
+            class="modal-body"
+            style="color: rgb(134, 134, 134); font-weight: 100"
+          >
+            {{msg}}
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+            >
+              Understood
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer-header">
+        <div class="footer-header-title">
+          <div class="footer-header-img">
+            <img src="/static/images/location.png" alt="img" />
+          </div>
+          <div class="footer-header-detail">
+            <div class="footer-header-detail-heading">
+              <p>Lahore</p>
+            </div>
+            <div class="footer-header-detail-info">
+              <p>PUCIT OLD CAMPUS</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-header-title">
+          <div class="footer-header-img">
+            <img src="/static/images/phone.png" alt="img" />
+          </div>
+          <div class="footer-header-detail">
+            <div class="footer-header-detail-heading">
+              <p>Feel Free to Call Us Now</p>
+            </div>
+            <div class="footer-header-detail-info">
+              <p>(042)4472 8290</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-header">
+          <div id="service-img" class="footer-header-img">
+            <img src="/static/images/servicecar.png" alt="img" />
+          </div>
+          <div id="service-detail" class="footer-header-detail">
+            <div class="footer-header-detail-heading">
+              <p>24/7 Roadside Assistance</p>
+            </div>
+            <div class="footer-header-detail-info">
+              <p>(042)775 2725</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-vertical-line"></div>
+
+      <div class="footer-end">
+        <div class="footer-end-portion1">
+          <div class="portion1-title">
+            <p>ABOUT US</p>
+          </div>
+
+          <div class="footer-portion-vertical-line"></div>
+
+          <div class="portion1-details">
+            <p>Lahore</p>
+            <p>PUCIT OLD CAMPUS</p>
+            <div class="portion1-details-points">
+              <div class="point">
+                <p>Mobile:</p>
+                <p class="point-info">(042)4472 8290</p>
+              </div>
+              <div class="point">
+                <p>Assistance:</p>
+                <p class="point-info">(042)775 2725</p>
+              </div>
+              <div class="point">
+                <p>E-mail:</p>
+                <p class="point-info">bsef20a028@pucit.edu.pk</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-end-portion2">
+          <div class="portion2-title">
+            <p>OUR SERVICES</p>
+          </div>
+
+          <div class="footer-portion-vertical-line"></div>
+
+          <div class="portion2-points">
+            <ul>
+              <li><a href="/enginediagnostics">Engine Diagnostics</a></li>
+              <li><a href="/lube-oil"> Lube, Oil and Filters</a></li>
+              <li><a href="/carwash">Car Wash</a></li>
+              <!-- <li>Belts And Hoses</li> -->
+              <li><a href="/airconditioning">Air Conditioning</a></li>
+              <li><a href="/brake-repair">Brake Repair</a></li>
+              <li><a href="/wheel-service">Tire And Wheel Services</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-end-portion3">
+          <div class="portion3-title">
+            <p>POPULAR TAGS</p>
+          </div>
+
+          <div class="footer-portion-vertical-line"></div>
+
+          <div class="portion3-details">
+            <div class="tag-row">
+              <a href="/brakes">BRAKES</a>
+              <a href="/diagnostics">ENGINE</a>
+              <a href="/engine">AC</a>
+            </div>
+
+            <div class="tag-row">
+              <a href="/filters">FILTERS</a>
+              <a href="/oils">Oils</a>
+              <a href="/suspension">Suspension</a>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="footer-end-portion4">
+          <div class="portion4-title">
+            <p>TIMINGS</p>
+          </div>
+
+          <div class="footer-portion-vertical-line"></div>
+
+          <div class="portion4-details">
+            <div class="days">
+              <p>MONDAY:</p>
+              <p>TUESDAY:</p>
+              <p>WEDNESDAY:</p>
+              <p>THURSDAY:</p>
+              <p>FRIDAY:</p>
+              <p>SATUREDAY:</p>
+              <p>SUNDAY:</p>
+            </div>
+            <div class="timings">
+              <p>7:30am - 5:30pm:</p>
+              <p>7:30am - 5:30pm:</p>
+              <p>7:30am - 5:30pm:</p>
+              <p>7:30am - 5:30pm:</p>
+              <p>7:30am - 5:30pm:</p>
+              <p>7:30am - 5:30pm:</p>
+              <p>Closed</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </body>
+</html>

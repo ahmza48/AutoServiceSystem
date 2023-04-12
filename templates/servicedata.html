@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>Documents</title>
+<meta charset="UTF-8">
+     <meta charset="UTF-8">
+    <title>ShowContacts</title>
+          <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+  	<script
+  src="http://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+	<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+    <link rel="stylesheet" href="/static/styles/aboutus.css">
+
+</head>
+
+<body onload="loadServices()">
+
+<div class="header-container">
+        <div class="logo">
+            <a style="text-decoration: none" href="/adminpanel"><h1>Admin Panel</h1></a>
+        </div>
+
+        <div class="navbar">
+            <nav class="navbar-container">
+                <ul id="navbar-links" class="sf-menu">
+
+                    <li id="service-id">
+                        <a href="/employees">Employees</a>
+                    </li>
+
+                    <li
+                        id="aboutus-id"
+                    >
+                        <a href="/services">Services</a>
+
+                    </li>
+                    <li
+                        id="our-team-id"
+                    >
+                        <a href="/viewfeedback">View Feedbacks</a>
+                    </li>
+
+                    <li
+                        id="menu-item-989"
+                    >
+                        <a href="/viewappointments">Appointment</a>
+                    </li>
+
+                    <li
+                        id="contact-id"
+                    >
+                        <a href="/adminlogout">Logout</a>
+
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+    </div>
+
+<div class="container">
+<table id="tbl" border="2">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Service Name</th>
+        <th>Service Group</th>
+        <th>Service Cost</th>
+        <th>Description</th>
+        <th>Delete</th>
+    </tr>
+    </thead>
+</table>
+
+</div>
+<script>
+    function loadServices(){
+        $.ajax({
+            type : 'GET',
+            url : '/api/services',
+            success : function(res){
+                console.log(res)
+                res = JSON.parse(res)
+                table = $('#tbl').DataTable({
+                    data : res, destroy : true,
+                    columns :[
+                        { data : 'id'},
+                        { data : 'servicename'},
+                        { data : 'servicegroup'},
+                        { data : 'servicecost'},
+                        { data : 'description'},
+                        {
+                            data: null,
+                            render: function(data){
+                                console.log(data);
+                                {#const html = "<a class='' href='"+data.id+"' id='row-"+data.id+"'>Delete</a>"#}
+                                const html2 = "<a href='/delete/service/" +data.id+ "'>Delete</a>"
+                                return html2;
+                            },
+                        }
+                    ]
+                })
+            }
+        })
+    }
+</script>
+
+</body>
+</html>

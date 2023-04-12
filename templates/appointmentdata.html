@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/styles/aboutus.css">
+    <style>
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 2px solid;
+  padding: 8px;
+}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+}
+</style>
+</head>
+<body>
+<div class="header-container">
+        <div class="logo">
+            <a style="text-decoration: none" href="/adminpanel"><h1>Admin Panel</h1></a>
+        </div>
+
+        <div class="navbar">
+            <nav class="navbar-container">
+                <ul id="navbar-links" class="sf-menu">
+
+                    <li id="service-id">
+                        <a href="/employees">Employees</a>
+                    </li>
+
+                    <li
+                        id="aboutus-id"
+                    >
+                        <a href="/services">Services</a>
+
+                    </li>
+                    <li
+                        id="our-team-id"
+                    >
+                        <a href="/viewfeedback">View Feedbacks</a>
+                    </li>
+
+                    <li
+                        id="menu-item-989"
+                    >
+                        <a href="/viewappointments">Appointment</a>
+                    </li>
+
+                    <li
+                        id="contact-id"
+                    >
+                        <a href="/adminlogout">Logout</a>
+
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+    </div>
+
+    <table id="customers">
+        <tr>
+            <th>ID</th>
+            <th>Customer Name</th>
+            <th>Email</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+            <th>Phone Number</th>
+            <th>Serivce For</th>
+            <th>Serivce</th>
+            <th>Assigned Employee ID</th>
+        </tr>
+        {% for record in result%}
+        <tr>
+            <td>{{ record[0] }}</td>
+            <td>{{ record[1] }}</td>
+            <td>{{ record[2] }}</td>
+            <td>{{ record[3] }}</td>
+            <td>{{ record[4] }}</td>
+            <td>{{ record[5] }}</td>
+            <td>{{ record[6] }}</td>
+            <td>{{ record[7] }}</td>
+            <td>{{ record[8] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</body>
+</html>

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles/services.css">
+    <title>Services</title>
+</head>
+<body>
+<div class="header-container">
+        <div class="logo">
+        <h1>
+
+            AUTOSERVICE
+
+        </h1>
+        </div>
+
+        <div class="navbar">
+            <nav class="navbar-container">
+                <ul id="navbar-links" class="sf-menu">
+                    <li id="home-id">
+                        <a href="/" aria-current="page">Home</a>
+                    </li>
+
+                    <li id="service-id">
+                        <a href="/ourservices">Services</a>
+                    </li>
+
+                    <!-- <li
+                        id="services-id">
+                        <a href="/services">Services</a>
+                        <ul class="dropdown">
+                        <li
+                            id="service1"
+                            class="menu-item menu-item-type-post_type menu-item-object-ql_services menu-item-1001"
+                        >
+                            <a href="/engine-diagnostics"
+                            >Engine Diagnostics</a
+                            >
+                        </li>
+                        <li
+                            id="service2"
+                            class="menu-item menu-item-type-post_type menu-item-object-ql_services menu-item-1000"
+                        >
+                            <a href="/lube-oil-and-filters"
+                            >Lube Oil and Filters</a
+                            >
+                        </li>
+                        <li
+                            id="service3"
+                            class="menu-item menu-item-type-post_type menu-item-object-ql_services menu-item-999"
+                        >
+                            <a href="/belts-and-hoses"
+                            >Belts and Hoses</a
+                            >
+                        </li>
+                        <li
+                            id="service4"
+                            class="menu-item menu-item-type-post_type menu-item-object-ql_services menu-item-998"
+                        >
+                            <a href="/air-conditioning"
+                            >Air Conditioning</a
+                            >
+                        </li>
+                        <li
+                            id="service5"
+                            class="menu-item menu-item-type-post_type menu-item-object-ql_services menu-item-997"
+                        >
+                            <a href="/brake-repair"
+                            >Brake Repair</a
+                            >
+                        </li>
+                        <li
+                            id="service6"
+                            class="menu-item menu-item-type-post_type menu-item-object-ql_services menu-item-996"
+                        >
+                            <a href="/tire-and-wheel-services"
+                            >Tire and Wheel Services</a
+                            >
+                        </li>
+                        </ul>
+                    </li> -->
+                    <li
+                        id="gallery-id"
+                    >
+                        <a href="/aboutus">About Us</a>
+
+                    </li>
+                    <li
+                        id="our-team-id"
+                    >
+                        <a href="/ourteam">Our Team</a>
+                    </li>
+
+                    <li
+                        id="menu-item-989"
+                    >
+                        <a href="/appointment">Appointment</a>
+                    </li>
+
+                    <li
+                        id="contact-id"
+                    >
+                        <a href="/contactus">Contact Us</a>
+
+                    </li>
+
+                    <li
+                        id="contact-id"
+                    >
+                        <a href="/login">Login</a>
+
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+    </div>
+
+
+    <div class="section1">
+        <div class="section1-title">
+          <p>Services</p>
+        </div>
+        <div class="section1-info">
+          <p>YOU ARE HERE: <a href="/">Home</a> / Services</p>
+        </div>
+    </div>
+
+
+
+<div class="container">
+	{% for result in data %}
+    <div class="card">
+		<figure class="card__thumb">
+                    <img src="data:;base64,{{ result[0] }}" width="350" height="300" alt="img" class="card__image">
+                    <!-- <img src="https://source.unsplash.com/75S9fpDJVdo/300x510" alt="Picture by Kyle Cottrell" class="card__image"> -->
+			<figcaption class="card__caption">
+				<h2 class="card__title">{{ result[2] }}</h2>
+				<p class="card__snippet">{{ result[4] }}</p>
+				<a href="/appointment" class="card__button">Make Appointment</a>
+                <a id="price" href="" class="card__button">Rs {{ result[3] }}/-</a>
+			</figcaption>
+		</figure>
+	</div>
+    {% endfor %}
+{#	<div class="card">#}
+{#		<figure class="card__thumb">#}
+{#            <img src="/static/images/section5-img2.jpg" width="350" height="300" alt="img" class="card__image">#}
+{#			<figcaption class="card__caption">#}
+{#				<h2 class="card__title">Lube & Oil</h2>#}
+{#				<p class="card__snippet">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium enim tempora corrupti architecto adipisci facere delectus, atque ipsum reprehenderit expedita, sapiente odit facilis doloremque possimus voluptates! Ex quas nemo sed.</p>#}
+{#				<a href="/appointment" class="card__button">Make Appointment</a>#}
+{#                <a id="price" href="" class="card__button">Rs 1500/-</a>#}
+{#			</figcaption>#}
+{#		</figure>#}
+{#	</div>#}
+{##}
+{#    <div class="card">#}
+{#		<figure class="card__thumb">#}
+{#            <img src="/static/images/section5-img4.jpg" width="350" height="300" alt="img" class="card__image">#}
+{#			<figcaption class="card__caption">#}
+{#				<h2 class="card__title">AC Repair</h2>#}
+{#				<p class="card__snippet">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium enim tempora corrupti architecto adipisci facere delectus, atque ipsum reprehenderit expedita, sapiente odit facilis doloremque possimus voluptates! Ex quas nemo sed.</p>#}
+{#				<a href="/appointment" class="card__button">Make Appointment</a>#}
+{#                <a id="price" href="" class="card__button">Rs 2000/-</a>#}
+{#			</figcaption>#}
+{#		</figure>#}
+{#	</div>#}
+{##}
+{#    <div class="card">#}
+{#		<figure class="card__thumb">#}
+{#            <img src="/static/images/section5-img3.jpg" width="350" height="300" alt="img" class="card__image">#}
+{#			<figcaption class="card__caption">#}
+{#				<h2 class="card__title">Brakes Repair</h2>#}
+{#				<p class="card__snippet">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium enim tempora corrupti architecto adipisci facere delectus, atque ipsum reprehenderit expedita, sapiente odit facilis doloremque possimus voluptates! Ex quas nemo sed.</p>#}
+{#				<a href="/appointment" class="card__button">Make Appointment</a>#}
+{#                <a id="price" href="" class="card__button">Rs 2500/-</a>#}
+{#			</figcaption>#}
+{#		</figure>#}
+{#	</div>#}
+{##}
+{#    <div class="card">#}
+{#		<figure class="card__thumb">#}
+{#            <img src="/static/images/CarWashSedan.jpg" width="350" height="300" alt="img" class="card__image">#}
+{#			<figcaption class="card__caption">#}
+{#				<h2 class="card__title">Car Wash</h2>#}
+{#				<p class="card__snippet">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium enim tempora corrupti architecto adipisci facere delectus, atque ipsum reprehenderit expedita, sapiente odit facilis doloremque possimus voluptates! Ex quas nemo sed.</p>#}
+{#				<a href="/appointment" class="card__button">Make Appointment</a>#}
+{#                <a id="price" href="" class="card__button">Rs 1200/-</a>#}
+{#			</figcaption>#}
+{#		</figure>#}
+{#	</div>#}
+
+</div>
+
+
+
+<div class="footer">
+    <div class="footer-header">
+
+        <div class="footer-header-title">
+            <div class="footer-header-img">
+                <img src="/static/images/location.png" alt="img">
+            </div>
+            <div class="footer-header-detail">
+                <div class="footer-header-detail-heading">
+                    <p>Lahore</p>
+                </div>
+                <div class="footer-header-detail-info">
+                    <p>PUCIT OLD CAMPUS</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-header-title">
+            <div class="footer-header-img">
+                <img src="/static/images/phone.png" alt="img">
+            </div>
+            <div class="footer-header-detail">
+                <div class="footer-header-detail-heading">
+                    <p>Feel Free to Call Us Now</p>
+                </div>
+                <div class="footer-header-detail-info">
+                    <p>(042)4472 8290</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-header">
+            <div id="service-img" class="footer-header-img">
+                <img src="/static/images/servicecar.png" alt="img">
+            </div>
+            <div id="service-detail" class="footer-header-detail">
+                <div class="footer-header-detail-heading">
+                    <p>24/7 Roadside Assistance</p>
+                </div>
+                <div class="footer-header-detail-info">
+                    <p>(042)775 2725</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-vertical-line"></div>
+
+    <div class="footer-end">
+
+        <div class="footer-end-portion1">
+
+            <div class="portion1-title">
+                <p>ABOUT US</p>
+            </div>
+
+            <div class="footer-portion-vertical-line"></div>
+
+            <div class="portion1-details">
+                <p>Lahore</p>
+                <p>PUCIT OLD CAMPUS</p>
+                <div class="portion1-details-points">
+                    <div class="point">
+                        <p>Mobile:</p>
+                        <p class="point-info">(042)4472 8290</p>
+                    </div>
+                    <div class="point">
+                        <p>Assistance:</p>
+                        <p class="point-info">(042)775 2725</p>
+                    </div>
+                    <div class="point">
+                        <p>E-mail:</p>
+                        <p class="point-info">bsef20a028@pucit.edu.pk</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="footer-end-portion2">
+
+            <div class="portion2-title">
+                <p>OUR SERVICES</p>
+            </div>
+
+            <div class="footer-portion-vertical-line"></div>
+
+            <div class="portion2-points">
+                <ul>
+                    <li><a href="/services">Engine Diagnostics</a></li>
+                    <li><a href="/services"> Lube, Oil and Filters</a></li>
+                    <li><a href="/services">Car Wash</a></li>
+                    <!-- <li>Belts And Hoses</li> -->
+                    <li><a href="/services">Air Conditioning</a></li>
+                    <li><a href="/services">Brake Repair</a></li>
+                    <li><a href="/services">Tire And Wheel Services</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer-end-portion3">
+
+            <div class="portion3-title">
+                <p>POPULAR TAGS</p>
+            </div>
+
+            <div class="footer-portion-vertical-line"></div>
+
+            <div class="portion3-details">
+                <div class="tag-row">
+                    <a href="">BRAKES</a>
+                    <a href="">ENGINE</a>
+                    <a href="">AC</a>
+                </div>
+
+                <div class="tag-row">
+                    <a href="">FILTERS</a>
+                    <a href="">Oils</a>
+                    <a href="">Suspension</a>
+                </div>
+
+                <!-- <div class="tag-row-3">
+                    <a href="/brakes">BRAKES</a>
+                    <a href="/diagnostics">DIAGNOSTICS</a>
+                    <a href="/engine">ENGINE</a>
+                </div> -->
+
+                <!-- <ul>
+
+                    <li><a href="/filters">FILTERS</a></li>
+                    <li><a href="/oils">Oils</a></li>
+                    <li><a href="/suspension">Suspension</a></li>
+                </ul> -->
+            </div>
+
+        </div>
+
+        <div class="footer-end-portion4">
+
+            <div class="portion4-title">
+                <p>TIMINGS</p>
+            </div>
+
+            <div class="footer-portion-vertical-line"></div>
+
+            <div class="portion4-details">
+                <div class="days">
+                    <p>MONDAY:</p>
+                    <p>TUESDAY:</p>
+                    <p>WEDNESDAY:</p>
+                    <p>THURSDAY:</p>
+                    <p>FRIDAY:</p>
+                    <p>SATUREDAY:</p>
+                    <p>SUNDAY:</p>
+                </div>
+                <div class="timings">
+                    <p>7:30am - 5:30pm:</p>
+                    <p>7:30am - 5:30pm:</p>
+                    <p>7:30am - 5:30pm:</p>
+                    <p>7:30am - 5:30pm:</p>
+                    <p>7:30am - 5:30pm:</p>
+                    <p>7:30am - 5:30pm:</p>
+                    <p>Closed</p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+</body>
+</html>

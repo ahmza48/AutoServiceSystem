@@ -1,0 +1,176 @@
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <meta charset="UTF-8">#}
+{#    <title>Title</title>#}
+{#</head>#}
+{#<body>#}
+{#    <form method="post" action="/uploadservice" enctype="multipart/form-data">#}
+{#        <input type="text" placeholder="Enter Service Name:" name="servicename">#}
+{#        <select name="servicegroup">#}
+{#            <option>Car</option>#}
+{#            <option>Bike</option>#}
+{#        </select>#}
+{#        <input type="text" placeholder="Enter Service Cost" name="servicecost">#}
+{#        <input type="text" placeholder="Enter a Description " name ="description">#}
+{#        <input type="file" name="pic">#}
+{#        <input type="submit" value="Save Record">#}
+{#    </form>#}
+{##}
+{#<form action="/upload" method="POST" enctype="multipart/form-data">#}
+{#    <input type="file" name="pic">#}
+{#    <input type="submit">#}
+{#</form>#}
+{##}
+{#</body>#}
+{#</html>#}
+
+
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <meta charset="UTF-8">#}
+{#    <title>Title</title>#}
+{#</head>#}
+{#<body>#}
+{#    <form method="post" action="/addemployee">#}
+{#        <input type="text" placeholder="Enter First Name:" name="fname">#}
+{#        <input type="text" placeholder="Enter Last Name:" name="lname">#}
+{#        <select name="servicegroup">#}
+{#            <option>car</option>#}
+{#            <option>bike</option>#}
+{#        </select>#}
+{#        <input type="text" placeholder="Enter Specification" name="spec">#}
+{#        <input type="text" placeholder="Enter Phone Number" name="phn">#}
+{#        <input type="submit" value="Save Record">#}
+{#    </form>#}
+{#</body>#}
+{#</html>#}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add New Employee</title>
+    <link rel="stylesheet" href="/static/styles/aboutus.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style type="text/css">
+        .form-container {
+            width: 50%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f2f2f2;
+            border-radius: 10px;
+        }
+
+        .form-control {
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+        <link rel="stylesheet" href="/static/styles/aboutus.css">
+
+</head>
+<body>
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Company Name</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Employees</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+            </ul>
+        </div>
+    </nav> -->
+<div class="header-container">
+
+    <div class="logo">
+        <h1 style="font-weight: bolder"; class="fw-bolder"><a href="/adminpanel" style="text-decoration: none;color: rgb(41, 65, 170); ">Admin Panel</a></h1>
+        </div>
+
+        <div class="navbar">
+            <nav class="navbar-container">
+                <ul id="navbar-links" class="sf-menu">
+
+                    <li id="service-id">
+                        <a href="/employees">Employees</a>
+                    </li>
+
+                    <li
+                        id="aboutus-id"
+                    >
+                        <a href="/services">Services</a>
+
+                    </li>
+                    <li
+                        id="our-team-id"
+                    >
+                        <a href="/viewfeedback">View Feedbacks</a>
+                    </li>
+
+                    <li
+                        id="menu-item-989"
+                    >
+                        <a href="/viewappointments">Appointment</a>
+                    </li>
+
+                    <li
+                        id="contact-id"
+                    >
+                        <a href="/adminlogout">Logout</a>
+
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+    </div>
+
+    <div class="form-container">
+        <h1 style="color: rgb(41, 65, 170);">Add New Service</h1>
+        <form method="post" action="/uploadservice" enctype="multipart/form-data">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Enter Service Name:" name="servicename" required>
+            </div>
+
+            <div class="form-group">
+                <select class="form-control" name="servicegroup" required>
+                    <option>Car</option>
+                    <option>Bike</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+               <input type="text" class="form-control" name="servicecost" placeholder="Enter Service Cost" required>
+            </div>
+
+            <div class="form-group">
+                <textarea class="form-control" name="description" required placeholder="Enter a Description" name="spec" aria-placeholder="Enter a brief Description"></textarea>
+            </div>
+
+            <div class="form-group">
+                <input type="file" class="form-control" name="pic" required>
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary" value="Save Record">
+            </div>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
